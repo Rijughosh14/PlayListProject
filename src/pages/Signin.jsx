@@ -11,7 +11,7 @@ const Signin = () => {
         </div>
         <div className='mx-auto'>
             <button className='bg-purple-200 border border-gray-100 py-2 px-4 rounded-lg font-bold'>
-              Sign Up
+              Sign In
             </button>
         </div>
     </div>
