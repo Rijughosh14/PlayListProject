@@ -1,3 +1,4 @@
+// creating and opening the indexDB
 export const openDB=()=>{
     return new Promise((resolve,reject)=>{
         const request=indexedDB.open('MusicPlaylist',1);
@@ -31,7 +32,7 @@ export const openDB=()=>{
     })
 }
 
-
+//adding a music file to db
 export const AddMusicToDB=(db,data)=>{
     return new Promise((resolve,reject)=>{
         const transaction=db.transaction(['playlist'],'readwrite');
@@ -67,7 +68,7 @@ export const AddMusicToDB=(db,data)=>{
     })
 }
 
-
+//getting all stored music from db
 export const GetPlaylist=(db)=>{
     return new Promise((resolve,reject)=>{
         const transaction=db.transaction(['playlist'],'readonly')
@@ -86,6 +87,7 @@ export const GetPlaylist=(db)=>{
     })
 }
 
+//getting a stored music from db
 export const GetMusic=(db,id)=>{
     return new Promise((resolve,reject)=>{
         const transaction=db.transaction(['playlist'],'readonly')
@@ -104,6 +106,7 @@ export const GetMusic=(db,id)=>{
     })
 }
 
+//removing music from db
 export const RemoveMusicFromDB=(db,id)=>{
     return new Promise((resolve,reject)=>{
         const transaction=db.transaction(['playlist'],'readwrite');

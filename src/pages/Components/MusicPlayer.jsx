@@ -9,12 +9,15 @@ const UploadedAudio = ({ audioFile, playingnextFile,play }) => {
   const audioRef = useRef(null);
   const [position, setPosition] = useState(0);
 
+
+  //setting the SRC to the audio
   useEffect(() => {
     if (audioRef.current && audioFile) {
       audioRef.current.src = URL.createObjectURL(audioFile);
     }
   }, [audioFile]);
 
+  //this useeffect store the time
   useEffect(() => {
     if (audioRef.current && audioFile) {
       const audio = audioRef.current;
@@ -45,6 +48,7 @@ const UploadedAudio = ({ audioFile, playingnextFile,play }) => {
     }
   }, [audioFile, position]);
 
+  //this useeffect set the next playing file
   useEffect(() => {
 
     if (audioRef.current && audioFile) {
@@ -69,6 +73,7 @@ const UploadedAudio = ({ audioFile, playingnextFile,play }) => {
 
   }, [playingnextFile])
 
+  //setting the stored time
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.currentTime = position;
