@@ -102,7 +102,7 @@ const MusicPlayer = ({ audioFile, setaudioFile, playingnextFile,play }) => {
   return (
     !audioFile ?
       <div className='flex h-full '>
-        <div className='m-auto flex flex-row gap-2 items-center'>
+        <div className='m-auto flex flex-col md:flex-row gap-2 items-center'>
           <label htmlFor="audioFile" className='hover:cursor-pointer px-5 py-4 rounded-md shadow-lg bg-gray-500 hover:px-6 hover:py-5 font-serif text-white hover:text-lg '>
             <input id='audioFile' type="file" hidden accept={"audio/*"} onChange={(event) => HandleAudioSelect(event)} />
             Add

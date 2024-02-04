@@ -95,9 +95,9 @@ const Index = () => {
 
     return (
         <>
-            <div className='container flex bg-gradient-to-br from-blue-200 to-blue-100 mx-auto h-screen rounded-2xl shadow-2xl shadow-black flex-row'>
-                <div className='md:w-3/4 md:h-screen   flex flex-col h-fit'>
-                    <div className="bg-gray-100 md:rounded-3xl shadow-xl md:w-3/4 md:h-3/4 h-64 m-auto">
+            <div className='container flex bg-gradient-to-br from-blue-200 to-blue-100 mx-auto min-h-screen md:h-screen rounded-2xl shadow-2xl shadow-black flex-col md:flex-row'>
+                <div className='md:w-3/4 md:h-screen   flex flex-col h-fit md:gap-0 gap-3'>
+                    <div className="bg-gray-100 rounded-3xl shadow-xl min-w-64 md:w-3/4 md:h-3/4 h-64 m-auto">
                         <MusicPlayer
                             audioFile={audioFile}
                             setaudioFile={setaudioFile}
@@ -113,7 +113,7 @@ const Index = () => {
                         />
                     </div>
                 </div>
-                <div className='md:w-1/4 flex mr-4 '>
+                <div className='md:w-1/4 flex mr-4 w-full'>
                     <div className='bg-gray-100
                     px-2
                     py-2
